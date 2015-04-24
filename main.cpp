@@ -1,4 +1,4 @@
-#include"pl0.h"
+ï»¿#include"pl0.h"
 using namespace std;
 
 int main()
@@ -6,16 +6,16 @@ int main()
 	init();
 	GETSYM();
 	
-	cout<<"¸Ã³ÌÐò´Ê·¨·ÖÎö½á¹ûÈçÏÂ£º"<<endl;
-	cout<<"»ù±¾×ÖÓÐ£º";
+	cout<<"è¯¥ç¨‹åºè¯æ³•åˆ†æžç»“æžœå¦‚ä¸‹ï¼š"<<endl;
+	cout<<"åŸºæœ¬å­—æœ‰ï¼š";
 	showSYM();
-	cout<<endl<<"ÔËËã·ûÓÐ£º";
+	cout<<endl<<"è¿ç®—ç¬¦æœ‰ï¼š";
 	showOPT();
-	cout<<endl<<"±êÊ¾·ûÓÐ£º";
+	cout<<endl<<"æ ‡ç¤ºç¬¦æœ‰ï¼š";
 	showID();
-	cout<<endl<<"³£ÊýÓÐ£º";
+	cout<<endl<<"å¸¸æ•°æœ‰ï¼š";
 	showNUM();
-	cout<<endl<<"½ç·ûÓÐ£º";
+	cout<<endl<<"ç•Œç¬¦æœ‰ï¼š";
 	showDEL();
 	cout<<endl;
 

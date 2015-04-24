@@ -1,4 +1,4 @@
-#include"pl0.h"
+ï»¿#include"pl0.h"
 
 string WORD[norw];
 char OPT[noopt];
@@ -13,7 +13,7 @@ DELLink dellink = new DELNODE();
 void init()
 {
 	/*
-	ÉèÖÃ±£Áô×Ö£¬ÔËËã·û£¬½ç·û
+	è®¾ç½®ä¿ç•™å­—ï¼Œè¿ç®—ç¬¦ï¼Œç•Œç¬¦
 	*/
 	WORD[0]="BEGIN";															
 	WORD[1]="CALL";
@@ -46,7 +46,7 @@ void init()
 	DEL[4]=')';
 
 	/*
-	³õÊ¼»¯Á´±í
+	åˆå§‹åŒ–é“¾è¡¨
 	*/
 	symlink->SYM="";
 		symlink->next=NULL;
@@ -96,17 +96,17 @@ bool isDEL(char ss)
 
 void GETSYM()
 {
-	int num;                                    /*¿ØÖÆĞĞÊı*/
-	string line[1000];		                    /*Ã¿ĞĞµÄÔ´Âë*/
-	string sym;									/*±£Áô×Ö»º³åÇø*/
-	//string id;								/*×Ô¶¨Òå±êÊ¾·û»º³åÇø*/
-	string opt;                                 /*ÔËËã·û»º³åÇø*/
-	string number;                              /*Öµ»º³åÇø*/
-	string del;                                 /*½ç·û»º³åÇø*/
+	int num;                                    /*æ§åˆ¶è¡Œæ•°*/
+	string line[1000];		                    /*æ¯è¡Œçš„æºç */
+	string sym;									/*ä¿ç•™å­—ç¼“å†²åŒº*/
+	//string id;								/*è‡ªå®šä¹‰æ ‡ç¤ºç¬¦ç¼“å†²åŒº*/
+	string opt;                                 /*è¿ç®—ç¬¦ç¼“å†²åŒº*/
+	string number;                              /*å€¼ç¼“å†²åŒº*/
+	string del;                                 /*ç•Œç¬¦ç¼“å†²åŒº*/
 
 	readfile(num,line);
 
-	sym= "",opt = "", number = "", del = "";              /*Çå¿Õ»º´æÇø*/
+	sym= "",opt = "", number = "", del = "";              /*æ¸…ç©ºç¼“å­˜åŒº*/
 	
 
 	for (int i = 0; i < num; i++)
@@ -193,7 +193,7 @@ bool readfile(int &num,string *line)
 
 	if(!file.good())
 	{
-		cout<<"ÎÄ¼ş´ò¿ªÊ§°Ü£¡"<<endl;
+		cout<<"æ–‡ä»¶æ‰“å¼€å¤±è´¥ï¼"<<endl;
 		return false;
 	}
 

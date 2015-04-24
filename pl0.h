@@ -1,4 +1,4 @@
-#ifndef PL0_H
+ï»¿#ifndef PL0_H
 #define PL0_H
 
 #include<iostream>
@@ -9,9 +9,9 @@
 
 using namespace std;
 
-#define norw 13                          /*¹Ø¼ü×Ö¸öÊı*/
-#define noopt 9						     /*ÔËËã·û¸öÊı*/
-#define nodel 5							 /*½ç·û¸öÊı*/
+#define norw 13                          /*å…³é”®å­—ä¸ªæ•°*/
+#define noopt 9						     /*è¿ç®—ç¬¦ä¸ªæ•°*/
+#define nodel 5							 /*ç•Œç¬¦ä¸ªæ•°*/
 
 typedef struct SYM_Link{
 	string SYM;
@@ -39,27 +39,27 @@ typedef struct DEL_Link{
 }DELNODE,*DELLink;
 
 void init();
-bool isWORD(string ss);                  /*ÅĞ¶Ï×Ö·û´®ÊÇ·ñÎª±£Áô×Ö*/
-bool isOPT(char ss);					 /*ÅĞ¶Ï×Ö·ûÊÇ·ñÎªÔËËã·û*/
-bool isDEL(char ss);					 /*ÅĞ¶Ï×Ö·ûÊÇ·ñÎª½ç·û*/
-void GETSYM();                           /*´Ê·¨·ÖÎö*/
+bool isWORD(string ss);                  /*åˆ¤æ–­å­—ç¬¦ä¸²æ˜¯å¦ä¸ºä¿ç•™å­—*/
+bool isOPT(char ss);					 /*åˆ¤æ–­å­—ç¬¦æ˜¯å¦ä¸ºè¿ç®—ç¬¦*/
+bool isDEL(char ss);					 /*åˆ¤æ–­å­—ç¬¦æ˜¯å¦ä¸ºç•Œç¬¦*/
+void GETSYM();                           /*è¯æ³•åˆ†æ*/
 
 
-bool readfile(int &num, string *line);   /*¶ÁÈ¡ÎÄ¼ş*/
-bool isAlpha(char s);                    /*ÅĞ¶ÏÊÇ·ñÎª×ÖÄ¸*/
-bool isNum(char s);						 /*ÅĞ¶ÏÊÇ·ñÎªÊı×Ö*/
-bool isNeither(char s);                  /*¼È²»ÊÇÊı×ÖÒ²²»ÊÇ×ÖÄ¸*/
+bool readfile(int &num, string *line);   /*è¯»å–æ–‡ä»¶*/
+bool isAlpha(char s);                    /*åˆ¤æ–­æ˜¯å¦ä¸ºå­—æ¯*/
+bool isNum(char s);						 /*åˆ¤æ–­æ˜¯å¦ä¸ºæ•°å­—*/
+bool isNeither(char s);                  /*æ—¢ä¸æ˜¯æ•°å­—ä¹Ÿä¸æ˜¯å­—æ¯*/
 
-bool addSYM(string s);                   /*Ìí¼Ó±£Áô×Ö·û*/
-bool addID(string s);                    /*Ìí¼Ó×Ô¶¨Òå±êÊ¾·û*/    
-bool addNUM(string s);                   /*Ìí¼ÓÊı×Ö*/
-bool addDEL(string s);                   /*Ìí¼Ó½ç·û*/
-bool addOPT(string s);                   /*Ìí¼ÓÔËËã·û*/
+bool addSYM(string s);                   /*æ·»åŠ ä¿ç•™å­—ç¬¦*/
+bool addID(string s);                    /*æ·»åŠ è‡ªå®šä¹‰æ ‡ç¤ºç¬¦*/    
+bool addNUM(string s);                   /*æ·»åŠ æ•°å­—*/
+bool addDEL(string s);                   /*æ·»åŠ ç•Œç¬¦*/
+bool addOPT(string s);                   /*æ·»åŠ è¿ç®—ç¬¦*/
 
-bool showSYM();                          /*ÏÔÊ¾±£Áô×Ö·û*/
-bool showID();                           /*ÏÔÊ¾×Ô¶¨Òå±êÊ¾·û*/
-bool showNUM();                          /*ÏÔÊ¾Êı×Ö*/
-bool showDEL();                          /*ÏÔÊ¾½ç·û*/
-bool showOPT();							 /*ÏÔÊ¾ÔËËã·û*/
+bool showSYM();                          /*æ˜¾ç¤ºä¿ç•™å­—ç¬¦*/
+bool showID();                           /*æ˜¾ç¤ºè‡ªå®šä¹‰æ ‡ç¤ºç¬¦*/
+bool showNUM();                          /*æ˜¾ç¤ºæ•°å­—*/
+bool showDEL();                          /*æ˜¾ç¤ºç•Œç¬¦*/
+bool showOPT();							 /*æ˜¾ç¤ºè¿ç®—ç¬¦*/
 
 #endif
